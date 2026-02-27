@@ -3,11 +3,14 @@
 # Documento de Arquitectura del Sistema de Gestión de Órdenes y Entregas
 
 ## 1. Introducción  
-Este documento describe la arquitectura inicial del sistema de gestión de órdenes y entregas, incluyendo requisitos funcionales, requisitos de calidad y restricciones que deben ser consideradas en el diseño del software.
+En este documento se describe la arquitectura inicial de un sistema de gestión de órdenes y entregas, incluyendo los requisitos funcionales, requisitos no funcionales en escenarios de calidad y restricciones que deben ser consideradas en el diseño del software.
 
-**Equipo:** _[Nombre del equipo]_  
-**Integrantes:** _[Alejandra Osorio Giraldo - 2266128]_  
-**Fecha:** _[DD/MM/AAAA]_  
+**Integrantes:** _[Alejandra Osorio Giraldo - 2266128]_
+                _[Santiago Useche Tascón - 2266200]_
+                _[Alejandro Garzón - 2266088]_
+                _[Vanessa Duran Mona - 2359393]_
+                _[Miguel Angel Arboleda - 2160253]_
+                _[Jose David Marmol - 2266370]_
 
 ---
 
@@ -68,15 +71,18 @@ Los requisitos funcionales se presentan en forma de **historias de usuario**, es
 
 ---
 
-## 3. Requisitos de Calidad  
+## 3. Requisitos no funcionales como escenarios de Calidad  
 Los requisitos de calidad se presentan en forma de **historias de calidad**, siguiendo la estructura de Len Bass.
 
 ### **Historias de Calidad**
 | **ID**    | **Fuente**         | **Estímulo**         | **Artefactos**         | **Entorno**         | **Respuesta**         | **Medida de Respuesta**         |
 | --------- | ------------------ | -------------------- | ---------------------- | ------------------- | --------------------- | ------------------------------- |
-| **RQ-01** | _[Agregar fuente]_ | _[Agregar estímulo]_ | _[Agregar artefactos]_ | _[Agregar entorno]_ | _[Agregar respuesta]_ | _[Agregar medida de respuesta]_ |
-| **RQ-02** | _[Agregar fuente]_ | _[Agregar estímulo]_ | _[Agregar artefactos]_ | _[Agregar entorno]_ | _[Agregar respuesta]_ | _[Agregar medida de respuesta]_ |
-| **RQ-03** | _[Agregar fuente]_ | _[Agregar estímulo]_ | _[Agregar artefactos]_ | _[Agregar entorno]_ | _[Agregar respuesta]_ | _[Agregar medida de respuesta]_ |
+| **RQ-01** | Usuario registrado | Solicita agregar un producto a su carrito | Backend y bases de datos | Operacion normal |El sistema procesa la solicitud y agrega el producto al modulo de carrito | No debe de superar los 5 segundos en tiempo de respuesta |
+| **RQ-02** | Mayor cantidad de usuarios concurrentes | Aumento significativo en la carga de usuarios | Infraestructura en nube | Uso excesivo | El sistema debe escalar adecuadamente añadiendo instancias | El tiempo de respuesta no debe de verse afectado de forma tan significativa por un tiempo prolongado |
+| **RQ-03** | Usuario desconocido | Intenta acceder a informacion personal de otros usuarios | Bases de datos y modulo de autenticacion | Operacion normal | El sistema bloquea el acceso | Se deben de rechazar el 100% de los accesos no autorizados y registrarlos en los log|
+| **RQ-04** | _[Agregar fuente]_ | _[Agregar estímulo]_ | _[Agregar artefactos]_ | _[Agregar entorno]_ | _[Agregar respuesta]_ | _[Agregar medida de respuesta]_ |
+| **RQ-05** | _[Agregar fuente]_ | _[Agregar estímulo]_ | _[Agregar artefactos]_ | _[Agregar entorno]_ | _[Agregar respuesta]_ | _[Agregar medida de respuesta]_ |
+| **RQ-06** | _[Agregar fuente]_ | _[Agregar estímulo]_ | _[Agregar artefactos]_ | _[Agregar entorno]_ | _[Agregar respuesta]_ | _[Agregar medida de respuesta]_ |
 
 >  **Instrucciones:**  
 > - Completar al menos **6 historias de calidad**, alineadas con atributos clave como **rendimiento, escalabilidad y seguridad**.  
