@@ -59,21 +59,21 @@ Los requisitos de calidad se presentan en forma de **historias de calidad**, sig
 Las restricciones establecen **limitaciones** en la arquitectura del sistema, ya sean tecnológicas, de negocio, regulatorias o de infraestructura.
 
 ### **Lista de Restricciones**
-| **Tipo de Restricción** | **Descripción**| **cita** |
-| ----------------------- | ---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tecnológica  | _[Describir la restricción]_ | “debemos dividir la solución en servicios (microservicios)”|   
-| De infraestructura   | _[Describir la restricción]_ | “debe existir un punto único de entrada a la plataforma (un gateway)”| 
-| Tecnológica  | _[Describir la restricción]_ | “Se debe implementar con Spring Boot”|
-| Herramientas  | _[Describir la restricción]_ | “con un API Gateway (Spring Cloud Gateway o Kong)”| 
-| De seguridad  | _[Describir la restricción]_ | “Autenticación con OAuth2 y JWT.”| 
-| Tecnológica  | _[Describir la restricción]_ | “Mensajería asíncrona con Kafka o RabbitMQ.”| 
-| De infraestructura   | _[Describir la restricción]_ | “Despliegue en Kubernetes”| 
-| De proceso   | _[Describir la restricción]_ | “CI/CD con GitHub Actions.”| 
-| Herramientas   | _[Describir la restricción]_ | “Pruebas automatizadas con JUnit, Mockito y Testcontainers.”| 
-| Herramientas  | _[Describir la restricción]_ | “Monitoreo con Prometheus y Grafana, más logs centralizados y alertas.”| 
-| De tiempo  | _[Describir la restricción]_ | “El semestre dura 14 semanas, con sprints de 2 semanas.”| 
-| De proceso| _[Describir la restricción]_ | “Daily stand-up en Slack y review cada sprint.”| 
-| De proceso  | _[Describir la restricción]_ | “Todo debe quedar en tablero y repositorio con evidencia.”|
+| **ID** | **Tipo de Restricción** | **Descripción** | **Evidencia (Cita del relato)** |
+| ------ | ---------------------- | --------------- | ------------------------------- |
+| **R-01** | Arquitectura | El sistema debe construirse siguiendo una **arquitectura de microservicios**, donde cada servicio sea independiente, desplegable y escalable de forma autónoma. | *“debemos dividir la solución en servicios (microservicios) para que cada parte pueda escalar y desplegarse sin tumbar el resto.”* |
+| **R-02** | Tecnológica | El backend del sistema debe desarrollarse utilizando **Spring Boot** como framework principal. | *“Se debe implementar con Spring Boot”* |
+| **R-03** | Infraestructura | La plataforma debe contar con un **API Gateway** como punto único de entrada, para controlar acceso, seguridad y enrutamiento. | *“debe existir un punto único de entrada a la plataforma (un gateway)”* |
+| **R-04** | Herramientas | El API Gateway debe implementarse usando **Spring Cloud Gateway o Kong**. | *“con un API Gateway (Spring Cloud Gateway o Kong)”* |
+| **R-05** | Seguridad | La autenticación y autorización deben implementarse mediante **OAuth2 y JWT**, con control de acceso basado en roles. | *“Autenticación con OAuth2 y JWT.”* |
+| **R-06** | Tecnológica | La comunicación asíncrona entre servicios debe realizarse usando **Kafka o RabbitMQ**, garantizando que no haya pérdida ni duplicación de mensajes críticos. | *“Mensajería asíncrona con Kafka o RabbitMQ.”* |
+| **R-07** | Infraestructura | El sistema debe desplegarse en un entorno orquestado con **Kubernetes**, permitiendo escalabilidad automática y alta disponibilidad. | *“Despliegue en Kubernetes”* |
+| **R-08** | Herramientas | Se debe implementar un pipeline de **CI/CD con GitHub Actions**, para integración y despliegue automatizado. | *“CI/CD con GitHub Actions.”* |
+| **R-09** | Herramientas | Las pruebas automatizadas deben realizarse con **JUnit, Mockito y Testcontainers**, asegurando cobertura de los módulos críticos. | *“Pruebas automatizadas con JUnit, Mockito y Testcontainers.”* |
+| **R-10** | Herramientas | La observabilidad del sistema debe realizarse con **Prometheus y Grafana**, incluyendo logs centralizados y alertas automáticas ante errores o caídas de servicios. | *“Monitoreo con Prometheus y Grafana, más logs centralizados y alertas.”* |
+| **R-11** | Tiempo | El proyecto debe ejecutarse en un período de **14 semanas**, correspondiente a la duración del semestre. | *“El semestre dura 14 semanas, con sprints de 2 semanas.”* |
+| **R-12** | Proceso | La metodología de trabajo será **SCRUM**, con sprints de 2 semanas, incluyendo **daily stand-ups por Slack y revisión (review) al final de cada sprint**. | *“Daily stand-up en Slack y review cada sprint.”* |
+| **R-13** | Proceso | Todo el trabajo debe registrarse y evidenciarse en un **tablero y repositorio** de manera actualizada y centralizada. | *“Todo debe quedar en tablero y repositorio con evidencia.”* |
 
 >  **Tipos de restricciones:**  
 > - **Tecnológicas:** Lenguajes, frameworks o herramientas que deben utilizarse.  
