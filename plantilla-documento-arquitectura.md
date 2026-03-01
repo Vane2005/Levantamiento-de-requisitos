@@ -61,9 +61,9 @@ Las restricciones establecen **limitaciones** en la arquitectura del sistema, ya
 ### **Lista de Restricciones**
 | **ID** | **Tipo de Restricción** | **Descripción** | **Evidencia (Cita del relato)** |
 | ------ | ---------------------- | --------------- | ------------------------------- |
-| **R-01** | Arquitectura | El sistema debe construirse siguiendo una **arquitectura de microservicios**, donde cada servicio sea independiente, desplegable y escalable de forma autónoma. | *“debemos dividir la solución en servicios (microservicios) para que cada parte pueda escalar y desplegarse sin tumbar el resto.”* |
-| **R-02** | Tecnológica | El backend del sistema debe desarrollarse utilizando **Spring Boot** como framework principal. | *“Se debe implementar con Spring Boot”* |
-| **R-03** | Infraestructura | La plataforma debe contar con un **API Gateway** como punto único de entrada, para controlar acceso, seguridad y enrutamiento. | *“debe existir un punto único de entrada a la plataforma (un gateway)”* |
+| **R-01** | Arquitectura | El sistema debe construirse siguiendo una **arquitectura de microservicios**, donde cada servicio sea independiente, desplegable y escalable de forma autónoma. | *“Mi equipo de tecnología insiste en que debemos dividir la solución en servicios (microservicios) para que cada parte pueda escalar y desplegarse sin tumbar el resto.”* |
+| **R-02** | Tecnológica | El backend del sistema debe desarrollarse utilizando **Spring Boot** como framework principal. | *“Se debe implementar con Spring Boot y arquitectura por microservicios, con un API Gateway (Spring Cloud Gateway o Kong).”* |
+| **R-03** | Infraestructura | La plataforma debe contar con un **API Gateway** como punto único de entrada, para controlar acceso, seguridad y enrutamiento. | *“También me pidieron que exista un punto único de entrada a la plataforma (un gateway) para controlar acceso, seguridad y enrutamiento.”* |
 | **R-04** | Herramientas | El API Gateway debe implementarse usando **Spring Cloud Gateway o Kong**. | *“con un API Gateway (Spring Cloud Gateway o Kong)”* |
 | **R-05** | Seguridad | La autenticación y autorización deben implementarse mediante **OAuth2 y JWT**, con control de acceso basado en roles. | *“Autenticación con OAuth2 y JWT.”* |
 | **R-06** | Tecnológica | La comunicación asíncrona entre servicios debe realizarse usando **Kafka o RabbitMQ**, garantizando que no haya pérdida ni duplicación de mensajes críticos. | *“Mensajería asíncrona con Kafka o RabbitMQ.”* |
