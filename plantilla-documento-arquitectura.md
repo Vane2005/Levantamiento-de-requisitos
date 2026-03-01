@@ -59,9 +59,21 @@ Los requisitos de calidad se presentan en forma de **historias de calidad**, sig
 Las restricciones establecen **limitaciones** en la arquitectura del sistema, ya sean tecnológicas, de negocio, regulatorias o de infraestructura.
 
 ### **Lista de Restricciones**
-| **Tipo de Restricción** | **Descripción**                                                                                                                                                          |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| _[Agregar otro tipo]_   | _[Describir la restricción]_                                                                                                                                             |
+| **Tipo de Restricción** | **Descripción**| **cita** |
+| ----------------------- | ---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tecnológica  | _[Describir la restricción]_ | “debemos dividir la solución en servicios (microservicios)”|   
+| De infraestructura   | _[Describir la restricción]_ | “debe existir un punto único de entrada a la plataforma (un gateway)”| 
+| Tecnológica  | _[Describir la restricción]_ | “Se debe implementar con Spring Boot”|
+| Herramientas  | _[Describir la restricción]_ | “con un API Gateway (Spring Cloud Gateway o Kong)”| 
+| De seguridad  | _[Describir la restricción]_ | “Autenticación con OAuth2 y JWT.”| 
+| Tecnológica  | _[Describir la restricción]_ | “Mensajería asíncrona con Kafka o RabbitMQ.”| 
+| De infraestructura   | _[Describir la restricción]_ | “Despliegue en Kubernetes”| 
+| De proceso   | _[Describir la restricción]_ | “CI/CD con GitHub Actions.”| 
+| Herramientas   | _[Describir la restricción]_ | “Pruebas automatizadas con JUnit, Mockito y Testcontainers.”| 
+| Herramientas  | _[Describir la restricción]_ | “Monitoreo con Prometheus y Grafana, más logs centralizados y alertas.”| 
+| De tiempo  | _[Describir la restricción]_ | “El semestre dura 14 semanas, con sprints de 2 semanas.”| 
+| De proceso| _[Describir la restricción]_ | “Daily stand-up en Slack y review cada sprint.”| 
+| De proceso  | _[Describir la restricción]_ | “Todo debe quedar en tablero y repositorio con evidencia.”|
 
 >  **Tipos de restricciones:**  
 > - **Tecnológicas:** Lenguajes, frameworks o herramientas que deben utilizarse.  
