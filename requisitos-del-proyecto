@@ -3,7 +3,7 @@
 # Documento de Arquitectura del Sistema de Gestión de Órdenes y Entregas
 
 ## 1. Introducción  
-En este documento se describe la arquitectura inicial de un sistema de gestión de órdenes y entregas, incluyendo los requisitos funcionales, requisitos no funcionales en escenarios de calidad y restricciones que deben ser consideradas en el diseño del software.
+En este documento se describe la arquitectura inicial de un sistema de una plataforma de eventos y boletería, incluyendo los requisitos funcionales, requisitos no funcionales en escenarios de calidad y restricciones que deben ser consideradas en el diseño del software.
 
 **Integrantes:** _[Alejandra Osorio Giraldo - 2266128]_
                 _[Santiago Useche Tascón - 2266200]_
@@ -61,12 +61,12 @@ Las restricciones establecen **limitaciones** en la arquitectura del sistema, ya
 ### **Lista de Restricciones**
 | **ID** | **Tipo de Restricción** | **Descripción** | **Evidencia (Cita del relato)** |
 | ------ | ---------------------- | --------------- | ------------------------------- |
-| **R-01** | Arquitectura | El sistema debe construirse siguiendo una **arquitectura de microservicios**, donde cada servicio sea independiente, desplegable y escalable de forma autónoma. | *“Mi equipo de tecnología insiste en que debemos dividir la solución en servicios (microservicios) para que cada parte pueda escalar y desplegarse sin tumbar el resto.”* |
-| **R-02** | Tecnológica | El backend del sistema debe desarrollarse utilizando **Spring Boot** como framework principal. | *“Se debe implementar con Spring Boot y arquitectura por microservicios, con un API Gateway (Spring Cloud Gateway o Kong).”* |
-| **R-03** | Infraestructura | La plataforma debe contar con un **API Gateway** como punto único de entrada, para controlar acceso, seguridad y enrutamiento. | *“También me pidieron que exista un punto único de entrada a la plataforma (un gateway) para controlar acceso, seguridad y enrutamiento.”* |
-| **R-04** | Herramientas | El API Gateway debe implementarse usando **Spring Cloud Gateway o Kong**. | *“con un API Gateway (Spring Cloud Gateway o Kong)”* |
-| **R-05** | Seguridad | La autenticación y autorización deben implementarse mediante **OAuth2 y JWT**, con control de acceso basado en roles. | *“Autenticación con OAuth2 y JWT.”* |
-| **R-06** | Tecnológica | La comunicación asíncrona entre servicios debe realizarse usando **Kafka o RabbitMQ**, garantizando que no haya pérdida ni duplicación de mensajes críticos. | *“Mensajería asíncrona con Kafka o RabbitMQ.”* |
+| **R-01** | Tiempo | *"Todo el desarrollo del proyecto debe realizar en un intervalo de 13 semanas. "* | *"Yo necesito que ustedes construyan el backend del MVP en 13 semanas, porque ya tengo conversaciones abiertas con organizadores de dosciudades y me están pidiendo una fecha para pruebas." * |
+| **R-02** | "Herramientas" | "El sistema debe estar conectado a una pasarela de pago real y un sandbox que permita una visualizacion completa de los procesos" | *"Por eso yo quiero que el sistema esté conectado con una pasarela de pagos real, aunque sea en modo pruebas. No quiero simulaciones “de mentiras”; necesito por lo menos un sandbox real donde se vea el flujo, estados, callbacks, confirmaciones, etc."* |
+| **R-03** | Tecnológica | "El" sistema no debe implementar recomendaciones con IA ni contar con App moviles nativas" | "No necesito motor de recomendaciones con IA, ni app móvil nativa, ni contabilidad completa. Necesito lo esencial, pero bien hecho, porque esto va a estar de cara a clientes reales." |
+| **R-04** | Infraestructura | "El Backend del proyecto debe estar construido bajo la arquitectura de MicroServicios" | "En la empresa vamos a tener equipos distintos trabajando, así que necesito que esté separado en servicios con responsabilidades claras." |
+| **R-05** | Seguridad | "Las bases de datos de los Servicios deben estar aisladas" | "No quieroque un servicio toque la base de datos de otro como atajo, porque después eso no lomantiene nadie." |
+| **R-06** | Tecnológica |"" | "" |
 | **R-07** | Infraestructura | El sistema debe desplegarse en un entorno orquestado con **Kubernetes**, permitiendo escalabilidad automática y alta disponibilidad. | *“Despliegue en Kubernetes”* |
 | **R-08** | Herramientas | Se debe implementar un pipeline de **CI/CD con GitHub Actions**, para integración y despliegue automatizado. | *“CI/CD con GitHub Actions.”* |
 | **R-09** | Herramientas | Las pruebas automatizadas deben realizarse con **JUnit, Mockito y Testcontainers**, asegurando cobertura de los módulos críticos. | *“Pruebas automatizadas con JUnit, Mockito y Testcontainers.”* |
